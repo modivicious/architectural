@@ -10,6 +10,7 @@ body {
   font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
+  letter-spacing: 0.04em;
   color: var(--text-primary);
   background-color: var(--bg-primary);
 }
@@ -22,6 +23,20 @@ body {
   max-width: 1750px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.carousel-text {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-primary);
+  white-space: nowrap;
+}
+
+.carousel-text--fill {
+  color: var(--text-primary);
+  -webkit-text-stroke: unset;
 }
 
 .visually-hidden {
