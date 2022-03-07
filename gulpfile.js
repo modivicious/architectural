@@ -68,7 +68,7 @@ function webpDel() {
 }
 
 function build() {
-  return src(["app/**/*.html", "app/**/manifest.json", "app/css/style.min.css", "app/js/main.min.js"], {
+  return src(["app/**/*.html", "app/**/manifest.json", "app/css/style.min.css", "app/css/color-schemes", "app/js/main.min.js"], {
     base: "app",
   }).pipe(dest("dist"));
 }

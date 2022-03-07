@@ -6,9 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architectural | Home page</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#c7cbcc">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#273a43">
   <meta name="description" content="Description">
   <meta name="keywords" content="Keywords">
-  <meta name="theme-color" content="#ecebeb">
   <link rel="icon" href="images/favicon/favicon.svg">
   <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -17,6 +19,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Syncopate:wght@700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="css/color-schemes/light.css" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="css/color-schemes/dark.css" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -39,7 +43,7 @@
           </li>
         </ul>
         <a class="logo" href="#">
-          <img src="images/logo.svg" alt="logo, return to the home page">
+          <img class="logo__img invert" src="images/logo.svg" alt="logo, return to the home page">
         </a>
         <ul class="menu__list menu__right">
           <li class="menu__item">
@@ -51,15 +55,16 @@
           <li class="menu__item">
             <fieldset class="switcher">
               <legend class="visually-hidden">Color Scheme</legend>
-              <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" aria-label="light"
-                checked>
-              <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" aria-label="dark">
+              <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light"
+                aria-label="light">
+              <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark"
+                aria-label="dark">
               <div class="switcher__status"></div>
             </fieldset>
           </li>
           <li class="menu__item">
-            <button class="menu__settings-btn" type="button">
-
+            <button class="menu__settings-btn invert" type="button">
+              <span class="visually-hidden">Settings</span>
             </button>
           </li>
         </ul>

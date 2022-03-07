@@ -10,13 +10,15 @@ body {
   font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
 
 .main {
   flex-grow: 1;
 }
 
-.container{
+.container {
   max-width: 1750px;
   padding: 0 15px;
   margin: 0 auto;

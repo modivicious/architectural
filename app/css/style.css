@@ -45,7 +45,7 @@
   display: flex;
   width: 76px;
   height: 38px;
-  border: 2px solid #000;
+  border: 2px solid var(--text-primary);
   border-radius: 19px;
   position: relative;
 }
@@ -73,10 +73,6 @@
 .switcher__radio--dark {
   background-image: url("../images/icons/dark.svg");
   background-position: right calc(50% - 1px) center;
-}
-
-.switcher__radio:checked {
-  filter: invert(1);
 }
 
 .switcher__status {

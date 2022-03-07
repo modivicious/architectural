@@ -1,0 +1,22 @@
+:root {
+  --bg-primary: #fff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #eceff1;
+  --text-primary: #000;
+  --text-secondary: #9e9e9e;
+  --text-tertiary: #e5e5e5;
+  --border-primary: #eceff1;
+}
+
+.switcher__radio,
+.invert {
+  filter: invert(0);
+}
+
+.switcher__radio:checked {
+  filter: invert(1);
+}
+
+.switcher__status {
+  filter: invert(0);
+}
