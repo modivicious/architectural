@@ -34,11 +34,6 @@
   white-space: nowrap;
 }
 
-.logo {
-  display: inline-block;
-  /* margin: 0 161px 0 155px; */
-}
-
 .menu__settings-btn {
   width: 24px;
   height: 24px;
