@@ -1,3 +1,25 @@
+$('.projects__photos').slick({
+  centerMode: true,
+  variableWidth: true,
+  initialSlide: 1,
+  arrows: false,
+  infinite: false,
+  draggable: false,
+  asNavFor: '.projects__names',
+});
+
+$('.projects__names').slick({
+  asNavFor: '.projects__photos',
+  focusOnSelect: true,
+  centerMode: true,
+  variableWidth: true,
+  initialSlide: 1,
+  arrows: false,  
+  infinite: false,
+  draggable: false,
+});
+
+// color schemes
 const lightStyle = document.querySelector('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
 const darkStyle = document.querySelector('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
 const switcherRadios = document.querySelectorAll('.switcher__radio');

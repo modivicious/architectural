@@ -25,6 +25,11 @@ body {
   margin: 0 auto;
 }
 
+.border-bottom {
+  padding-bottom: 100px;
+  border-bottom: 2px solid var(--border-primary);
+}
+
 .carousel-text {
   font-family: "Syncopate", sans-serif;
   font-weight: 700;
@@ -37,6 +42,20 @@ body {
 .carousel-text--fill {
   color: var(--text-primary);
   -webkit-text-stroke: unset;
+}
+
+.central-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  font-weight: 500;
+  padding-right: 34px;
+  background-image: url("../images/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .visually-hidden {

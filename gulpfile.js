@@ -35,7 +35,10 @@ function styles() {
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src([
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/slick-carousel/slick/slick.js",
+    "app/js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -58,7 +61,7 @@ function images() {
 }
 
 function webp() {
-  return src("app/images/**/*.*")
+  return src(["app/images/**/*.*", "!app/images/favicon/**/*.*"])
     .pipe(webpConvert({ quality: 90 }))
     .pipe(dest("app/images"));
 }
