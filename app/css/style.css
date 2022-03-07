@@ -2,6 +2,111 @@
 @import url("normalize.css");
 @import url("global.css");
 
+/* header */
 
+.header {
+  padding-top: 38px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 38px;
+  border-bottom: 2px solid var(--border-primary);
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 100px;
+}
+
+.menu__link {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+
+.logo {
+  display: inline-block;
+  /* margin: 0 161px 0 155px; */
+}
+
+.menu__settings-btn {
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/gear.svg");
+  background-repeat: no-repeat;
+}
+
+.switcher {
+  display: flex;
+  width: 76px;
+  height: 38px;
+  border: 2px solid #000;
+  border-radius: 19px;
+  position: relative;
+}
+
+.switcher__radio {
+  appearance: none;
+  width: 36px;
+  height: 34px;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+
+.switcher__radio:focus {
+  outline: none;
+}
+
+.switcher__radio--light {
+  background-image: url("../images/icons/light.svg");
+  background-position: left calc(50% - 1px) center;
+}
+
+.switcher__radio--dark {
+  background-image: url("../images/icons/dark.svg");
+  background-position: right calc(50% - 1px) center;
+}
+
+.switcher__radio:checked {
+  filter: invert(1);
+}
+
+.switcher__status {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 76px;
+  height: 38px;
+  z-index: -1;
+  border-radius: 19px;
+  background-image: url("../images/icons/selected.svg");
+  background-repeat: no-repeat;
+  transition: background-position 0.15s;
+}
+
+.switcher__radio:focus-visible ~ .switcher__status {
+  box-shadow: 0 0 0 1px #000;
+}
+
+.switcher__radio--light:checked ~ .switcher__status {
+  background-position: left center;
+}
+
+.switcher__radio--dark:checked ~ .switcher__status {
+  background-position: right center;
+}
 
 @import url("media.css");

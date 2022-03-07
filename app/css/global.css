@@ -16,6 +16,12 @@ body {
   flex-grow: 1;
 }
 
+.container{
+  max-width: 1750px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);

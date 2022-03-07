@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title</title>
+  <title>Architectural | Home page</title>
   <meta name="description" content="Description">
   <meta name="keywords" content="Keywords">
   <meta name="theme-color" content="#ecebeb">
@@ -22,7 +22,48 @@
 
 <body>
   <header class="header">
-    
+    <div class="container">
+      <nav class="menu">
+        <ul class="menu__list menu__left">
+          <li class="menu__item">
+            <a class="menu__link" href="#">home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">projects</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">clients</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">gallery</a>
+          </li>
+        </ul>
+        <a class="logo" href="#">
+          <img src="images/logo.svg" alt="logo, return to the home page">
+        </a>
+        <ul class="menu__list menu__right">
+          <li class="menu__item">
+            <a class="menu__link" href="#">about us</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">contact</a>
+          </li>
+          <li class="menu__item">
+            <fieldset class="switcher">
+              <legend class="switcher__legend visually-hidden">Color Scheme</legend>
+              <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" checked aria-label="light">
+              <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" aria-label="dark">
+              <div class="switcher__status"></div>
+            </fieldset>
+          </li>
+          <li class="menu__item">
+            <button class="menu__settings-btn" type="button">
+
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main">
