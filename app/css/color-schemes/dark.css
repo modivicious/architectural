@@ -6,11 +6,12 @@
   --text-secondary: #9e9e9e;
   --text-tertiary: #212121;
   --border-primary: #212121;
+  --scroll-track: #9e9e9e;
 }
 
 .switcher__radio,
 .invert {
-  filter: invert(1);
+  filter: invert(0.93);
 }
 
 .switcher__radio:checked {
@@ -18,5 +19,5 @@
 }
 
 .switcher__status {
-  filter: invert(1);
+  filter: invert(0.93);
 }
