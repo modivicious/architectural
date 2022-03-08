@@ -308,4 +308,38 @@
   margin-bottom: 10px;
 }
 
+/* footer */
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.footer__list,
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.footer__item:not(:last-child),
+.socials__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.socials__link svg {
+  width: 24px;
+  height: 24px;
+}
+
+.footer__copy {
+  padding: 39px 0;
+  background-color: var(--bg-tertiary);
+}
+
+.footer__copy p {
+  color: var(--text-secondary);
+}
+
 @import url("media.css");
