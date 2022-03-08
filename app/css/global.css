@@ -82,12 +82,28 @@ body {
   align-items: center;
 }
 
+.invert-decor {
+  position: relative;
+}
+
+.invert-decor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+}
+
 .link {
   font-weight: 500;
   padding-right: 34px;
+}
+
+.link::after {
+  width: 24px;
+  height: 24px;
   background-image: url("../images/icons/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: right;
 }
 
 .visually-hidden {

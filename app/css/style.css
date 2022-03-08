@@ -34,6 +34,7 @@
 }
 
 .menu__settings-btn {
+  display: block;
   width: 24px;
   height: 24px;
   background-image: url("../images/icons/gear.svg");
@@ -284,9 +285,12 @@
   width: max-content;
   font-weight: 500;
   padding-right: 31px;
+}
+
+.contact__submit::after {
+  width: 21px;
+  height: 18px;
   background-image: url("../images/icons/send.svg");
-  background-repeat: no-repeat;
-  background-position: right;
 }
 
 .contact__separator {
@@ -328,9 +332,27 @@
   margin-right: 50px;
 }
 
-.socials__link svg {
+.socials__link {
+  display: block;
   width: 24px;
   height: 24px;
+  background-repeat: no-repeat;
+}
+
+.socials__link--dribbble{
+  background-image: url('../images/icons/dribbble.svg');
+}
+
+.socials__link--facebook{
+  background-image: url('../images/icons/facebook.svg');
+}
+
+.socials__link--instagram{
+  background-image: url('../images/icons/instagram.svg');
+}
+
+.socials__link--twitter{
+  background-image: url('../images/icons/twitter.svg');
 }
 
 .footer__copy {
@@ -339,6 +361,7 @@
 }
 
 .footer__copy p {
+  font-size: 18px;
   color: var(--text-secondary);
 }
 

@@ -10,7 +10,8 @@
 }
 
 .switcher__radio,
-.invert {
+.invert,
+.invert-decor::after {
   filter: invert(0);
 }
 
