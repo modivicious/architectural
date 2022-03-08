@@ -61,7 +61,7 @@ function images() {
 }
 
 function webp() {
-  return src(["app/images/**/*.*", "!app/images/favicon/**/*.*"])
+  return src(["app/images/**/*.jpg", "app/images/**/*.png", "!app/images/favicon/**/*.*"])
     .pipe(webpConvert({ quality: 90 }))
     .pipe(dest("app/images"));
 }
