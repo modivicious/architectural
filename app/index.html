@@ -85,9 +85,9 @@
     <h1 class="visually-hidden">Architectural firm</h1>
 
     <section class="intro">
-      <div class="intro__phrase">
+      <div class="intro__phrase anim-parent">
         <p class="carousel-text">we build magic</p>
-        <h2 class="carousel-text carousel-text--fill">we build magic</h2>
+        <h2 class="carousel-text fill-anim">we build magic</h2>
         <p class="carousel-text">we build magic</p>
       </div>
       <div class="intro__wrapper">
@@ -189,11 +189,11 @@
 
     <section class="about central-wrapper">
       <h2 class="visually-hidden">About us</h2>
-      <div class="about__words">
-        <p class="carousel-text">we urban <span class="carousel-text--fill">we</span> interior we</p>
-        <p class="carousel-text">are estrutural <span class="carousel-text--fill">are</span> living are</p>
-        <p class="carousel-text">rustic <span class="carousel-text--fill">about</span> futuristic</p>
-        <p class="carousel-text">arch natural <span class="carousel-text--fill">arch</span> modern arch</p>
+      <div class="about__words anim-parent">
+        <p class="carousel-text">we urban <span class="fill-anim">we</span> interior we</p>
+        <p class="carousel-text">are estrutural <span class="fill-anim">are</span> living are</p>
+        <p class="carousel-text">rustic <span class="fill-anim">about</span> futuristic</p>
+        <p class="carousel-text">arch natural <span class="fill-anim">arch</span> modern arch</p>
       </div>
       <a class="link invert-decor" href="#">about us</a>
     </section>
@@ -210,13 +210,13 @@
               <fieldset class="contact__fieldset">
                 <legend class="visually-hidden">Please fill in the fields</legend>
                 <label class="visually-hidden" for="name">Your Name</label>
-                <input class="contact__input" id="name" type="text" placeholder="Your Name">
+                <input class="contact__input" id="name" type="text" placeholder="Your Name" required>
                 <label class="visually-hidden" for="email">Your Email</label>
-                <input class="contact__input" id="email" type="email" placeholder="you@email.com">
+                <input class="contact__input" id="email" type="email" placeholder="you@email.com" required>
                 <label class="visually-hidden" for="tel">Your phone number</label>
-                <input class="contact__input" id="tel" type="tel" placeholder="+1 408 123 4567">
+                <input class="contact__input" id="tel" type="tel" placeholder="+1 408 123 4567" required> 
                 <label class="visually-hidden" for="message">Your Message</label>
-                <input class="contact__input" id="message" type="text" placeholder="Message">
+                <input class="contact__input" id="message" type="text" placeholder="Message" required>
                 <button class="contact__submit invert-decor" type="submit">send</button>
               </fieldset>
             </form>

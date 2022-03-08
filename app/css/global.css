@@ -69,11 +69,16 @@ body {
   color: transparent;
   -webkit-text-stroke: 1px var(--text-primary);
   white-space: nowrap;
+  transition: color 0.5s ease-in;
+}
+
+.carousel-text span {
+  transition: inherit;
 }
 
 .carousel-text--fill {
   color: var(--text-primary);
-  -webkit-text-stroke: unset;
+  /* -webkit-text-stroke: unset; */
 }
 
 .central-wrapper {

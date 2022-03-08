@@ -1,22 +1,22 @@
-$('.projects__photos').slick({
+const slidersOptions = {
   centerMode: true,
   variableWidth: true,
   initialSlide: 1,
   arrows: false,
   infinite: false,
   draggable: false,
+  speed: 600,
+};
+
+$('.projects__photos').slick({
+  ...slidersOptions,
   asNavFor: '.projects__names',
 });
 
 $('.projects__names').slick({
+  ...slidersOptions,
   asNavFor: '.projects__photos',
   focusOnSelect: true,
-  centerMode: true,
-  variableWidth: true,
-  initialSlide: 1,
-  arrows: false,  
-  infinite: false,
-  draggable: false,
 });
 
 // color schemes
@@ -64,3 +64,27 @@ function saveScheme(scheme) {
 
 setupSwitcher();
 setupScheme();
+
+// anim on scroll
+const animItems = document.querySelectorAll(".anim-parent");
+
+const animOptions = {
+  threshold: .75,
+  rootMargin: "10000px 0px 0px 0px"
+};
+
+const animObserver = new IntersectionObserver((entries, animObserver) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    animStart(entry.target);
+    animObserver.unobserve(entry.target);
+  });
+}, animOptions)
+
+function animStart(e) {
+  const fillAnim = e.querySelectorAll(".fill-anim");
+  fillAnim.forEach(item => item.classList.add("carousel-text--fill"));
+}
+
+animItems.forEach(item => animObserver.observe(item));
