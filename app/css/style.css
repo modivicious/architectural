@@ -192,6 +192,7 @@
 
 .review__cite {
   font-family: "Syncopate", sans-serif;
+  font-weight: 700;
   font-style: normal;
   line-height: 1;
   margin-bottom: 25px;
@@ -226,6 +227,85 @@
 
 .about__words .carousel-text:not(:last-child) {
   margin-bottom: 50px;
+}
+
+/* contact */
+
+.contact {
+  padding: 100px 0;
+}
+
+.contact__title {
+  margin-bottom: 50px;
+}
+
+.contact__descr {
+  max-width: 995px;
+  font-size: 36px;
+  margin-bottom: 100px;
+}
+
+.contact__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 433px;
+  height: 1px;
+}
+
+.contact__form {
+  max-width: 705px;
+  width: 100%;
+}
+
+.contact__fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__input {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--text-primary);
+}
+
+.contact__input:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.contact__input::placeholder {
+  color: var(--text-secondary);
+}
+
+.contact__input:focus {
+  outline: none;
+}
+
+.contact__submit {
+  width: max-content;
+  font-weight: 500;
+  padding-right: 31px;
+  background-image: url("../images/icons/send.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.contact__separator {
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-primary);
+}
+
+.contact__link {
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.contact__group:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.contact__name {
+  margin-bottom: 10px;
 }
 
 @import url("media.css");

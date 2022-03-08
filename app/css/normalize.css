@@ -84,4 +84,7 @@ legend {
 input,
 textarea {
   border: none;
+  background-color: transparent;
+  color: inherit;
+  letter-spacing: inherit;
 }
