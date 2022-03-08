@@ -103,7 +103,6 @@
 
 .intro {
   padding-top: 100px;
-  overflow: hidden;
 }
 
 .intro__phrase {
@@ -210,6 +209,23 @@
 
 .gallery__img-box {
   margin-bottom: 100px;
+}
+
+/* about */
+
+.about {
+  padding: 100px 0;
+  background-color: var(--bg-secondary);
+}
+
+.about__words {
+  font-size: 96px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.about__words .carousel-text:not(:last-child) {
+  margin-bottom: 50px;
 }
 
 @import url("media.css");
