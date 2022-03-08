@@ -31,6 +31,7 @@
   font-weight: 500;
   text-transform: lowercase;
   white-space: nowrap;
+  transition: opacity 0.15s;
 }
 
 .menu__settings-btn {
@@ -143,6 +144,10 @@
 
 .projects__photos .slick-slide {
   margin: 0 50px;
+}
+
+.projects__img{
+  transition: opacity 0.25s;
 }
 
 .projects__names {
@@ -285,6 +290,7 @@
   width: max-content;
   font-weight: 500;
   padding-right: 31px;
+  transition: opacity 0.15s;
 }
 
 .contact__submit::after {
@@ -337,22 +343,23 @@
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
+  transition: opacity 0.15s;
 }
 
-.socials__link--dribbble{
-  background-image: url('../images/icons/dribbble.svg');
+.socials__link--dribbble {
+  background-image: url("../images/icons/dribbble.svg");
 }
 
-.socials__link--facebook{
-  background-image: url('../images/icons/facebook.svg');
+.socials__link--facebook {
+  background-image: url("../images/icons/facebook.svg");
 }
 
-.socials__link--instagram{
-  background-image: url('../images/icons/instagram.svg');
+.socials__link--instagram {
+  background-image: url("../images/icons/instagram.svg");
 }
 
-.socials__link--twitter{
-  background-image: url('../images/icons/twitter.svg');
+.socials__link--twitter {
+  background-image: url("../images/icons/twitter.svg");
 }
 
 .footer__copy {
@@ -363,6 +370,20 @@
 .footer__copy p {
   font-size: 18px;
   color: var(--text-secondary);
+}
+
+/* hover effects */
+
+.menu__link:hover,
+.link:hover,
+.socials__link:hover,
+.contact__submit:hover,
+.projects__img:hover {
+  opacity: 0.7;
+}
+
+.projects__img:hover{
+  opacity: 0.85;
 }
 
 @import url("media.css");

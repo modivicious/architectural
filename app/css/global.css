@@ -98,6 +98,7 @@ body {
 .link {
   font-weight: 500;
   padding-right: 34px;
+  transition: opacity 0.25s;
 }
 
 .link::after {
