@@ -11,6 +11,15 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#273a43">
   <meta name="description" content="Description">
   <meta name="keywords" content="Keywords">
+  <script> // script for old browsers
+    if (matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="styles/light.css" onload="document.documentElement.style.display=\'\'">'
+      );
+    }
+  </script>
   <link rel="icon" href="images/favicon/favicon.svg">
   <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
