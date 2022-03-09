@@ -116,6 +116,7 @@
 .intro__phrase .carousel-text {
   font-size: 72px;
   line-height: 1;
+  transition-delay: 0.4s;
 }
 
 .intro__phrase .carousel-text:not(:last-child) {
@@ -146,7 +147,7 @@
   margin: 0 50px;
 }
 
-.projects__img{
+.projects__img {
   transition: opacity 0.25s;
 }
 
@@ -227,6 +228,7 @@
 
 .about__words {
   font-size: 96px;
+  line-height: 1;
   text-align: center;
   margin-bottom: 100px;
 }
@@ -382,7 +384,7 @@
   opacity: 0.7;
 }
 
-.projects__img:hover{
+.projects__img:hover {
   opacity: 0.85;
 }
 
