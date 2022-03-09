@@ -1,11 +1,11 @@
 const slidersOptions = {
   centerMode: true,
   variableWidth: true,
-  initialSlide: 1,
+  initialSlide: 2,
   arrows: false,
   infinite: false,
   draggable: false,
-  speed: 600,
+  speed: 750,
 };
 
 $('.projects__photos').slick({
