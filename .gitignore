@@ -9,4 +9,5 @@ dist/
 node_modules/
 package-lock.json
 app/css/style.min.css
+app/css/media.min.css
 app/js/main.min.js

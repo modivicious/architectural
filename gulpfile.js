@@ -31,7 +31,19 @@ function styles() {
       })
     )
     .pipe(dest("app/css"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream()),
+
+    src("app/css/media.css")
+      .pipe(concat("media.min.css"))
+      .pipe(cleanCSS())
+      .pipe(
+        autoprefixer({
+          overrideBrowserslist: ["last 10 versions"],
+          grid: true,
+        })
+      )
+      .pipe(dest("app/css"))
+      .pipe(browserSync.stream());
 }
 
 function scripts() {
@@ -50,7 +62,7 @@ function images() {
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 90, progressive: true }),
+        imagemin.mozjpeg({ quality: 80, progressive: true }),
         imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
           plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
@@ -62,7 +74,7 @@ function images() {
 
 function webp() {
   return src(["app/images/**/*.jpg", "app/images/**/*.png", "!app/images/favicon/**/*.*"])
-    .pipe(webpConvert({ quality: 90 }))
+    .pipe(webpConvert({ quality: 80 }))
     .pipe(dest("app/images"));
 }
 
@@ -71,7 +83,7 @@ function webpDel() {
 }
 
 function build() {
-  return src(["app/**/*.html", "app/**/manifest.json", "app/css/style.min.css", "app/css/color-schemes", "app/js/main.min.js"], {
+  return src(["app/**/*.html", "app/**/manifest.json", "app/css/style.min.css", "app/css/media.min.css", "app/css/color-schemes/**/*", "app/js/main.min.js"], {
     base: "app",
   }).pipe(dest("dist"));
 }

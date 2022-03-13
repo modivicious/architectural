@@ -1,3 +1,4 @@
+// slider
 const slidersOptions = {
   centerMode: true,
   variableWidth: true,
@@ -69,7 +70,7 @@ setupScheme();
 const animItems = document.querySelectorAll(".anim-parent");
 
 const animOptions = {
-  threshold: .75,
+  threshold: 0.3,
   rootMargin: "10000px 0px 0px 0px"
 };
 
@@ -88,3 +89,68 @@ function animStart(e) {
 }
 
 animItems.forEach(item => animObserver.observe(item));
+
+// media
+const menuLeft = document.querySelector(".menu__left");
+const menuRight = document.querySelector(".menu__right");
+const transferItems = document.querySelectorAll(".menu__item-transfer");
+const switcher = document.querySelector(".menu__item--switcher");
+
+let flags = { "1366": false, "660": false };
+let currentWidth = document.documentElement.clientWidth;
+
+if (currentWidth <= 1366)
+  itemsToLeft();
+if (currentWidth <= 660)
+  switcherToLeft();
+
+window.addEventListener("resize", () => {
+  currentWidth = document.documentElement.clientWidth;
+  if (currentWidth <= 1366 && flags[1366] === false)
+    itemsToLeft();
+  else if (currentWidth > 1366 && flags[1366] === true)
+    itemsToRight();
+
+  if (currentWidth <= 660 && flags[660] === false)
+    switcherToLeft();
+  else if (currentWidth > 660 && flags[660] === true)
+    switcherToRight();
+});
+
+function itemsToLeft() {
+  transferItems.forEach(elem => menuLeft.insertAdjacentElement("beforeend", elem));
+  flags[1366] = true;
+}
+
+function itemsToRight() {
+  transferItems.forEach(elem => menuRight.insertAdjacentElement("afterbegin", elem));
+  flags[1366] = false;
+}
+
+function switcherToLeft() {
+  menuLeft.insertAdjacentElement("afterbegin", switcher);
+  flags[660] = true;
+}
+
+function switcherToRight() {
+  menuRight.insertAdjacentElement("afterbegin", switcher);
+  flags[660] = false;
+}
+
+// menu
+const menuBtn = document.querySelector(".menu__btn");
+
+menuBtn.addEventListener("click", menuToggle);
+
+function menuToggle() {
+  menuBtn.classList.toggle("menu__btn--active");
+  menuLeft.classList.toggle("menu__left--active");
+  document.body.classList.toggle("hide-overflow");
+}
+
+window.addEventListener("click", e => {
+  if (menuLeft.classList.contains("menu__left--active") &&
+    !menuLeft.contains(e.target) &&
+    !menuBtn.contains(e.target)
+  ) menuToggle();
+});

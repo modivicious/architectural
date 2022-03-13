@@ -31,12 +31,16 @@
   <link rel="stylesheet" href="css/color-schemes/light.css" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="css/color-schemes/dark.css" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/media.min.css" media="(max-width: 1660px)">
 </head>
 
 <body>
   <header class="header">
     <div class="container">
       <nav class="menu border-bottom">
+        <button class="menu__btn invert" type="button" aria-label="menu">
+          <span></span>
+        </button>
         <ul class="menu__list menu__left">
           <li class="menu__item">
             <a class="menu__link" href="#">home</a>
@@ -55,17 +59,17 @@
           <img class="logo__img invert" src="images/logo.svg" alt="logo, return to the home page">
         </a>
         <ul class="menu__list menu__right">
-          <li class="menu__item">
+          <li class="menu__item menu__item-transfer">
             <a class="menu__link" href="#">about us</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item-transfer">
             <a class="menu__link" href="#">contact</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item--switcher">
             <fieldset class="switcher">
               <legend class="visually-hidden">Color Scheme</legend>
               <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light"
-                aria-label="light">
+                aria-label="light" checked>
               <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark"
                 aria-label="dark">
               <div class="switcher__status"></div>
