@@ -6,7 +6,7 @@ const slidersOptions = {
   arrows: false,
   infinite: false,
   draggable: false,
-  speed: 750,
+  speed: 770,
 };
 
 $('.projects__photos').slick({

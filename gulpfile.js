@@ -93,7 +93,7 @@ function cleanDist() {
 }
 
 function watching() {
-  watch(["app/css/**/*.css", "!app/css/style.min.css"], styles);
+  watch(["app/css/**/*.css", "!app/css/style.min.css", "!app/css/media.min.css"], styles);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
 }
